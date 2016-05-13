@@ -11,7 +11,7 @@
 				<div class="panel-group">
 					<div class="panel panel-default"  name="carpanel">
 						<div class="panel-header"><h3>Name's Car</h3></div>
-						<div class="panel-body"><img class="img-responsive" src="/Sport-Blue-16wheel-PlasBump-NoSpoil.png"></div>
+						<div class="panel-body">{{> carpicture}} </div>
 					</div>
 					<div class="panel panel-default"  name="optionspanel">
 						<div class="panel-header"><h3>Car Options</h3></div>
@@ -43,6 +43,7 @@
 
 <template name="carchassis">
 	<form>
+		<strong><u>Chassis</u></strong><br>
 		<input type="radio" id="sport-chassis" name="chassis" value="Sport">Sport Car <br>
 		<input type="radio" id="suv-chassis" name="chassis" value="SUV">SUV <br>
 		<input type="radio" id="truck-chassis" name="chassis" value="Truck">Truck <br>
@@ -51,6 +52,7 @@
 
 <template name="carcolor">
 	<form>
+		<strong><u>Color</u></strong><br>
 		<input type="radio" id="blue-color" name="color" value="Blue">Blue <br>
 		<input type="radio" id="red-color" name="color" value="Red">Red <br>
 		<input type="radio" id="yellow-color" name="color" value="Yellow">Yellow <br>
@@ -59,30 +61,32 @@
 
 <template name="carwheel">
 	<form>
-		<input type="radio" name="wheel" value="16wheel">16 inch <br>
-		<input type="radio" name="wheel" value="18wheel">18 inch <br>
-		<input type="radio" name="wheel" value="20wheel">20 inch <br>
-		<input type="radio" name="wheel" value="22wheel">22 inch <br>
+		<strong><u>Wheel Rim</u></strong><br>
+		<input type="radio" id="sixteen" name="wheel" value="16wheel">16 inch <br>
+		<input type="radio" id="eighteen" name="wheel" value="18wheel">18 inch <br>
+		<input type="radio" id="twenty" name="wheel" value="20wheel">20 inch <br>
+		<input type="radio" id="twentytwo" name="wheel" value="22wheel">22 inch <br>
 	</form>
 </template>
 
 <template name="carbumper">
 	<form>
-		<input type="radio" name="bumper" value="PlasBump">Plastic <br>
-		<input type="radio" name="bumper" value="ChromeBump">Chrome <br>
-		<input type="radio" name="bumper" value="FiberBump">Carbonfiber <br>
+		<strong><u>Bumper Style</u></strong><br>
+		<input type="radio" id="plastic" name="bumper" value="PlasBump">Plastic <br>
+		<input type="radio" id="chrome" name="bumper" value="ChromeBump">Chrome <br>
+		<input type="radio" id="carbon" name="bumper" value="FiberBump">Carbonfiber <br>
 	</form>
 </template>
 
 <template name="carspoiler">
 	<form>
-		<input type="radio" name="spoiler" value="PlasBump">None <br>
-		<input type="radio" name="spoiler" value="ChromeBump">Low <br>
-		<input type="radio" name="spoiler" value="FiberBump">High <br>
+		<strong><u>Spoiler</u></strong><br>
+		<input type="radio" id="no-spoil" name="spoiler" value="NoSpoil">None <br>
+		<input type="radio" id="low-spoil" name="spoiler" value="LowSpoil">Low <br>
+		<input type="radio" id="high-spoil" name="spoiler" value="HighSpoil">High <br>
 	</form>
 </template>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="carpicture">
+  <img class="img-responsive" src="/Sport-Blue-16wheel-PlasBump-NoSpoil.png">
 </template>
