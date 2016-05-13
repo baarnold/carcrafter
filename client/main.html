@@ -43,17 +43,17 @@
 
 <template name="carchassis">
 	<form>
-		<input type="radio" name="chassis" value="Sport">Sport Car <br>
-		<input type="radio" name="chassis" value="Sport">SUV <br>
-		<input type="radio" name="chassis" value="Sport">Truck <br>
+		<input type="radio" id="sport-chassis" value="Sport">Sport Car <br>
+		<input type="radio" id="suv-chassis" value="SUV">SUV <br>
+		<input type="radio" id="truck-chassis" value="Truck">Truck <br>
 	</form>
 </template>
 
 <template name="carcolor">
 	<form>
-		<input type="radio" name="color" value="Blue">Blue <br>
-		<input type="radio" name="color" value="Red">Red <br>
-		<input type="radio" name="color" value="Red">Yellow <br>
+		<input type="radio" id="blue-color" name="color" value="Blue">Blue <br>
+		<input type="radio" id="red-color" name="color" value="Red">Red <br>
+		<input type="radio" id="yellow-color" name="color" value="Yellow">Yellow <br>
 	</form>
 </template>
 
@@ -85,14 +85,4 @@
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
-</template>
-
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com">Discussions</a></li>
-  </ul>
 </template>
