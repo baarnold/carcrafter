@@ -20,17 +20,17 @@
 								<div class="col-sm-3 col-lg-3 col-md-3 col-xs-3">
 									{{> carchassis}}
 								</div>
-								<div class="col-sm-3 col-lg-3 col-md-3 col-xs-3">
+								<div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
 									{{> carcolor}}
 								</div>
-								<div class="col-sm-3 col-lg-3 col-md-3 col-xs-3">
-									{{> carchassis}}
+								<div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
+									{{> carwheel}}
 								</div>
 								<div class="col-sm-3 col-lg-3 col-md-3 col-xs-3">
-									{{> carchassis}}
+									{{> carbumper}}
 								</div>
-								<div class="col-sm-3 col-lg-3 col-md-3 col-xs-3">
-									{{> carchassis}}
+								<div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
+									{{> carspoiler}}
 								</div>
 							</div>
 						</div>
@@ -43,7 +43,7 @@
 
 <template name="carchassis">
 	<form>
-		<input type="radio" name="chassis" value="Sport">Sports Car <br>
+		<input type="radio" name="chassis" value="Sport">Sport Car <br>
 		<input type="radio" name="chassis" value="Sport">SUV <br>
 		<input type="radio" name="chassis" value="Sport">Truck <br>
 	</form>
@@ -66,11 +66,19 @@
 	</form>
 </template>
 
-<template name="carcolor">
+<template name="carbumper">
 	<form>
-		<input type="radio" name="bumper" value="blue">Blue <br>
-		<input type="radio" name="color" value="red">Red <br>
-		<input type="radio" name="color" value="red">Yellow <br>
+		<input type="radio" name="bumper" value="PlasBump">Plastic <br>
+		<input type="radio" name="bumper" value="ChromeBump">Chrome <br>
+		<input type="radio" name="bumper" value="FiberBump">Carbonfiber <br>
+	</form>
+</template>
+
+<template name="carspoiler">
+	<form>
+		<input type="radio" name="spoiler" value="PlasBump">None <br>
+		<input type="radio" name="spoiler" value="ChromeBump">Low <br>
+		<input type="radio" name="spoiler" value="FiberBump">High <br>
 	</form>
 </template>
 
