@@ -14,13 +14,65 @@
 						<div class="panel-body"><img class="img-responsive" src="/Sport-Blue-16wheel-PlasBump-NoSpoil.png"></div>
 					</div>
 					<div class="panel panel-default"  name="optionspanel">
-						<div class="panel-body">Panel Content</div>
+						<div class="panel-header"><h3>Car Options</h3></div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-sm-3 col-lg-3 col-md-3 col-xs-3">
+									{{> carchassis}}
+								</div>
+								<div class="col-sm-3 col-lg-3 col-md-3 col-xs-3">
+									{{> carcolor}}
+								</div>
+								<div class="col-sm-3 col-lg-3 col-md-3 col-xs-3">
+									{{> carchassis}}
+								</div>
+								<div class="col-sm-3 col-lg-3 col-md-3 col-xs-3">
+									{{> carchassis}}
+								</div>
+								<div class="col-sm-3 col-lg-3 col-md-3 col-xs-3">
+									{{> carchassis}}
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </body>
+
+<template name="carchassis">
+	<form>
+		<input type="radio" name="chassis" value="Sport">Sports Car <br>
+		<input type="radio" name="chassis" value="Sport">SUV <br>
+		<input type="radio" name="chassis" value="Sport">Truck <br>
+	</form>
+</template>
+
+<template name="carcolor">
+	<form>
+		<input type="radio" name="color" value="Blue">Blue <br>
+		<input type="radio" name="color" value="Red">Red <br>
+		<input type="radio" name="color" value="Red">Yellow <br>
+	</form>
+</template>
+
+<template name="carwheel">
+	<form>
+		<input type="radio" name="wheel" value="16wheel">16 inch <br>
+		<input type="radio" name="wheel" value="18wheel">18 inch <br>
+		<input type="radio" name="wheel" value="20wheel">20 inch <br>
+		<input type="radio" name="wheel" value="22wheel">22 inch <br>
+	</form>
+</template>
+
+<template name="carcolor">
+	<form>
+		<input type="radio" name="bumper" value="blue">Blue <br>
+		<input type="radio" name="color" value="red">Red <br>
+		<input type="radio" name="color" value="red">Yellow <br>
+	</form>
+</template>
 
 <template name="hello">
   <button>Click Me</button>
