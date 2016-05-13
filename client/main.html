@@ -1,12 +1,25 @@
 <head>
-  <title>simple</title>
+	<title>CarCrafter Inc.</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+	<h1>CarCrafter</h1>
 
-  {{> hello}}
-  {{> info}}
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-10 col-lg-10 col-md-10">
+				<div class="panel-group">
+					<div class="panel panel-default"  name="carpanel">
+						<div class="panel-header"><h3>Name's Car</h3></div>
+						<div class="panel-body"><img class="img-responsive" src="/Sport-Blue-16wheel-PlasBump-NoSpoil.png"></div>
+					</div>
+					<div class="panel panel-default"  name="optionspanel">
+						<div class="panel-body">Panel Content</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 <template name="hello">
