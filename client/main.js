@@ -3,11 +3,12 @@ import { Template } from 'meteor/templating';
 import './main.html';
 
 Template.carchassis.events({
-	'change #sport-chassis' : function(event) {
+	'change #sport-chassis' : function(event, template) {
 		event.preventDefault();
 		
-		//var target = event.target;
-		//var choice = target.radio.value;
+		var element = template.find('input:radio[name=carchassis]:checked');
+		console.log($(element).val());
+
 		console.log(event.type);
 	},
 	'change #suv-chassis': function(event) {
