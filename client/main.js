@@ -4,6 +4,13 @@ import { carCollection } from '../collections/collections.js';
 
 import './main.html';
 
+Meteor.subscribe('userData');
+userData = new Mongo.Collection('userData');
+
+Accounts.ui.config({
+	passwordSignupFields: 'USERNAME_ONLY'
+});
+
 Template.carEditor.events({
     'submit #editCar': function(event) {
         event.preventDefault();
@@ -26,7 +33,7 @@ Template.carEditor.events({
 
 Template.viewCars.helpers({
     getAllCars: function() {
-        return carCollection.find({});
+        return carsCollection.find({});
     }
 });
 
