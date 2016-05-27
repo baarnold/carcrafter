@@ -7,7 +7,7 @@ Meteor.startup(() => {
 
 Meteor.methods({
 	carInsert: function(car) {
-		car.updateOn = new Date();
+		//car.updateOn = new Date();
 		carCollection.insert(car);
 	},
 	carDelete: function(_id) {
@@ -21,6 +21,6 @@ Meteor.methods({
 	}
 });
 
-Meteor.publish('car', function() {
+Meteor.publish('craftedCars', function() {
 	return carCollection.find();
 });

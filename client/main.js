@@ -1,4 +1,5 @@
 import { Template } from 'meteor/templating';
+import { ReactiveVar } from 'meteor/reactive-var';
 import { carCollection } from '../collections/collections.js';
 
 import './main.html';
@@ -25,7 +26,7 @@ Template.carEditor.events({
 
 Template.viewCars.helpers({
     getAllCars: function() {
-        return carCollection.find({}, {"sort": {"updatedOn": -1}});
+        return carCollection.find({});
     }
 });
 
