@@ -13,6 +13,7 @@
 						<div class="panel-body">{{> carPicture}} </div>
 					</div>
 					{{> carEditor}}
+					{{> viewCars}}
 				</div>
 			</div>
 		</div>
@@ -53,6 +54,22 @@
 				</select>
 				<input type="submit" value="Update Car Design" class="form-control btn btn-primary">
 			</form>
+		</div>
+	</div>
+</template>
+
+<template name="viewCars">
+    <div class="panel panel-info">
+		<div class="panel-heading">
+			<h3>Crafted Cars</h3>
+		</div>
+		<div class="panel-body">
+			<ul class="list-group">
+				{{#each getAllCars}}
+					<li class="list-group-item"><strong>{{color}} {{chassis}}</strong>: {{wheel}}, {{bumper}}, {spoiler}}
+					</li>
+				{{/each}}
+			</ul>
 		</div>
 	</div>
 </template>

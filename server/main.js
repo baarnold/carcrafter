@@ -21,6 +21,6 @@ Meteor.methods({
 	}
 });
 
-Meteor.publish('cars', function() {
+Meteor.publish('car', function() {
 	return carCollection.find();
 });

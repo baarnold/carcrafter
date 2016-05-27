@@ -23,6 +23,12 @@ Template.carEditor.events({
     }
 });
 
+Template.viewCars.helpers({
+    getAllCars: function() {
+        return carCollection.find({}, {"sort": {"updatedOn": -1}});
+    }
+});
+
 Template.carPicture.helpers({
 	
 });
