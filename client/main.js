@@ -4,11 +4,14 @@ import { carCollection } from '../collections/collections.js';
 
 import './main.html';
 
+Meteor.subscribe('craftedCars');
 Meteor.subscribe('userData');
 userData = new Mongo.Collection('userData');
 
-Accounts.ui.config({
-	passwordSignupFields: 'USERNAME_ONLY'
+Template.content.helpers({
+	"isLoggedIn": function() {
+		return Meteor.user() != null;
+	}
 });
 
 Template.carEditor.events({
@@ -33,7 +36,7 @@ Template.carEditor.events({
 
 Template.viewCars.helpers({
     getAllCars: function() {
-        return carsCollection.find({});
+        return carCollection.find({});
     }
 });
 
