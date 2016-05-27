@@ -40,6 +40,15 @@ Template.viewCars.helpers({
     }
 });
 
+Template.viewCars.events({
+    'click a.delete': function(event) {
+        event.preventDefault();
+ 
+        var _id = $(event.target).data('id');
+        Meteor.call('carDelete', _id);
+    }
+});
+
 Template.carPicture.helpers({
 	
 });

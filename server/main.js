@@ -11,7 +11,7 @@ Meteor.methods({
 		carCollection.insert(car);
 	},
 	carDelete: function(_id) {
-		
+		carCollection.remove({"_id": _id});
 	},
 	carUpdate: function(updateCar) {
 		
