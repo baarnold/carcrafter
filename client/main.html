@@ -4,52 +4,60 @@
 
 <body>
 	<h1>CarCrafter</h1>
-
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-10 col-lg-10 col-md-10">
 				<div class="panel-group">
 					<div class="panel panel-default"  name="carpanel">
 						<div class="panel-header"><h3>Name's Car</h3></div>
-						<div class="panel-body">{{> carpicture}} </div>
+						<div class="panel-body">{{> carPicture}} </div>
 					</div>
-					<div class="panel panel-default"  name="optionspanel">
-						<div class="panel-header"><h3>Car Options</h3></div>
-						<div class="panel-body">
-							<div class="row">
-								<div class="col-sm-3 col-lg-3 col-md-3 col-xs-3">
-									{{> carchassis}}
-								</div>
-								<div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
-									{{> carcolor}}
-								</div>
-								<div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
-									{{> carwheel}}
-								</div>
-								<div class="col-sm-3 col-lg-3 col-md-3 col-xs-3">
-									{{> carbumper}}
-								</div>
-								<div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
-									{{> carspoiler}}
-								</div>
-							</div>
-						</div>
-					</div>
+					{{> carEditor}}
 				</div>
 			</div>
 		</div>
 	</div>
 </body>
 
-<template name="carchassis">
-	<form>
-		<strong><u>Chassis</u></strong><br>
-		<input type="radio" id="sport-chassis" name="chassis" value="Sport">Sport Car <br>
-		<input type="radio" id="lux-chassis" name="chassis" value="Luxury">Luxury <br>
-		<input type="radio" id="con-chassis" name="chassis" value="Convertible">Convertible <br>
-	</form>
+<template name="carEditor">
+	<div class="panel panel-default"  name="optionspanel">
+		<div class="panel-header"><h3>Car Options</h3></div>
+		<div class="panel-body">
+			<form id="editCar">
+				<select id="chassisChoice" class="form-control">
+					<option>Sports Car</option>
+					<option>Luxury Car</option>
+					<option>Convertible</option>
+				</select>
+				<select id="colorChoice" class="form-control">
+					<option>Maroon Red</option>
+					<option>Egg Blue</option>
+					<option>Sunflower Yellow</option>
+				</select>
+				<select id="wheelChoice" class="form-control">
+					<option>16 inch rim/24 inch tire</option>
+					<option>18 inch rim/24 inch tire</option>
+					<option>20 inch rim/24 inch tire</option>
+					<option>22 inch rim/24 inch tire</option>
+				</select>
+				<select id="bumperChoice" class="form-control">
+					<option>Standard Bumper (Plastic)</option>
+					<option>Rubber Bumper</option>
+					<option>Metal Bumper (Chrome)</option>
+					<option>Fibreglass Bumper</option>
+				</select>
+				<select id="spoilerChoice" class="form-control">
+					<option>No Spoiler</option>
+					<option>Low Spoiler</option>
+					<option>High Spoiler</option>
+				</select>
+				<input type="submit" value="Update Car Design" class="form-control btn btn-primary">
+			</form>
+		</div>
+	</div>
 </template>
 
+<!-- Deprecated code kept for referencing and possible return if drop menus dont work -->
 <template name="carcolor">
 	<form>
 		<strong><u>Color</u></strong><br>
@@ -87,6 +95,6 @@
 	</form>
 </template>
 
-<template name="carpicture">
+<template name="carPicture">
   <img class="img-responsive" src="/Sport-Blue-16wheel-PlasBump-NoSpoil.png">
 </template>
