@@ -24,10 +24,6 @@
 	</div>
 </template>
 
-<template name="homeContent">
-	
-</template>
-
 <template name="content">
 	{{> navigation }}
 	
@@ -52,34 +48,42 @@
 		<div class="panel-header"><h3>Car Options</h3></div>
 		<div class="panel-body">
 			<form id="editCar">
+				<h4>Model Chassis</h4>
 				<select id="chassisChoice" class="form-control">
 					<option>Sports Car</option>
 					<option>Luxury Car</option>
 					<option>Convertible</option>
 				</select>
+				<h4>Car Color</h4>
 				<select id="colorChoice" class="form-control">
 					<option>Maroon Red</option>
 					<option>Egg Blue</option>
 					<option>Sunflower Yellow</option>
 				</select>
+				<h4>Wheel Rim Size (Tire is 24 inches in diameter)</h4>
 				<select id="wheelChoice" class="form-control">
-					<option>16 inch rim</option>
-					<option>18 inch rim</option>
-					<option>20 inch rim</option>
-					<option>22 inch rim</option>
+					<option>Sixteen</option>
+					<option>Eighteen</option>
+					<option>Twenty</option>
 				</select>
+				<h4>Bumper Style</h4>
 				<select id="bumperChoice" class="form-control">
-					<option>Standard Bumper (Plastic)</option>
-					<option>Rubber Bumper</option>
-					<option>Metal Bumper (Chrome)</option>
-					<option>Fibreglass Bumper</option>
+					<option>Plastic</option>
+					<option>Rubber</option>
+					<option>Chrome</option>
+					<option>Fiberglass</option>
 				</select>
+				<h4>Spoiler (Optional)</h4>
 				<select id="spoilerChoice" class="form-control">
-					<option>No Spoiler</option>
-					<option>Low Spoiler</option>
-					<option>High Spoiler</option>
+					<option>None</option>
+					<option>Low</option>
+					<option>High</option>
 				</select>
-				<input type="submit" value="Update Car Design" class="form-control btn btn-primary">
+				<br>
+				<input type="button" id="update" value="Update Car Design" class="form-control btn btn-info">
+				<br>
+				<br>
+				<input type="submit" value="Finalize Car Design" class="form-control btn btn-success">
 			</form>
 		</div>
 	</div>
@@ -94,7 +98,6 @@
 			<ul class="list-group">
 				{{#each getAllCars}}
 					<li class="list-group-item"><strong>{{color}} {{chassis}}</strong>: {{wheel}}, {{bumper}}, {{spoiler}}
-					<br>
 					<a href="" data-id="{{_id}}" class="pull-right delete">Delete</a>
 					<a href="" data-id="{{_id}}" class="pull-right edit">Edit</a>
 					</li>
