@@ -8,6 +8,12 @@ Meteor.subscribe('craftedCars');
 Meteor.subscribe('userData');
 userData = new Mongo.Collection('userData');
 
+Session.setDefault('chassis', 'Sport');
+Session.setDefault('color', 'Blue');
+Session.setDefault('bumper', 'PlasBump');
+Session.setDefault('wheel', '16wheel');
+Session.setDefault('spoiler', 'NoSpoil');
+
 Template.content.helpers({
 	"isLoggedIn": function() {
 		return Meteor.user() != null;
@@ -26,8 +32,11 @@ Template.carEditor.events({
 			wheel: $('#wheelChoice').val(),
 			spoiler: $('#spoilerChoice').val()
         };
-		
+
 		console.log(tempDocument);
+		console.log(tempDocument.chassis);
+		return tempDocument;
+		
 
 	},
     'submit #editCar': function(event) {
@@ -65,5 +74,5 @@ Template.viewCars.events({
 });
 
 Template.carPicture.helpers({
-	
+
 });

@@ -31,10 +31,6 @@
 		<div class="row">
 			<div class="col-sm-10 col-lg-10 col-md-10">
 				<div class="panel-group">
-					<div class="panel panel-default"  name="carpanel">
-						<div class="panel-header"><h3></h3></div>
-						<div class="panel-body">{{> carPicture}} </div>
-					</div>
 					{{> carEditor}}
 					{{> viewCars}}
 				</div>
@@ -44,40 +40,43 @@
 </template>
 
 <template name="carEditor">
+	<div class="panel panel-default"  name="carpanel">
+		<div class="panel-header"><h3></h3></div>
+		<div class="panel-body"><img class="img-responsive" src="/{{tempDocument.chassis}}-Blue-16wheel-PlasBump-NoSpoil.png"> </div>
+	</div>
 	<div class="panel panel-default"  name="optionspanel">
 		<div class="panel-header"><h3>Car Options</h3></div>
 		<div class="panel-body">
 			<form id="editCar">
 				<h4>Model Chassis</h4>
 				<select id="chassisChoice" class="form-control">
-					<option>Sports Car</option>
-					<option>Luxury Car</option>
+					<option>Sport</option>
+					<option>Luxury</option>
 					<option>Convertible</option>
 				</select>
 				<h4>Car Color</h4>
 				<select id="colorChoice" class="form-control">
-					<option>Maroon Red</option>
-					<option>Egg Blue</option>
-					<option>Sunflower Yellow</option>
+					<option>Red</option>
+					<option>Blue</option>
+					<option>Yellow</option>
 				</select>
 				<h4>Wheel Rim Size (Tire is 24 inches in diameter)</h4>
 				<select id="wheelChoice" class="form-control">
-					<option>Sixteen</option>
-					<option>Eighteen</option>
-					<option>Twenty</option>
+					<option>16wheel</option>
+					<option>18wheel</option>
+					<option>20wheel</option>
 				</select>
 				<h4>Bumper Style</h4>
 				<select id="bumperChoice" class="form-control">
-					<option>Plastic</option>
-					<option>Rubber</option>
-					<option>Chrome</option>
-					<option>Fiberglass</option>
+					<option>PlasBump</option>
+					<option>ChromeBump</option>
+					<option>FiberBump</option>
 				</select>
 				<h4>Spoiler (Optional)</h4>
 				<select id="spoilerChoice" class="form-control">
-					<option>None</option>
-					<option>Low</option>
-					<option>High</option>
+					<option>NoSpoil</option>
+					<option>LowSpoil</option>
+					<option>HighSpoil</option>
 				</select>
 				<br>
 				<input type="button" id="update" value="Update Car Design" class="form-control btn btn-info">
@@ -148,5 +147,5 @@
 </template>
 
 <template name="carPicture">
-  <img class="img-responsive" src="/Sport-Blue-16wheel-PlasBump-NoSpoil.png">
+  <img class="img-responsive" src="/{{chassis}}-Blue-16wheel-PlasBump-NoSpoil.png">
 </template>
