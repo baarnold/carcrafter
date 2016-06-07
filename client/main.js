@@ -20,7 +20,7 @@ Template.carEditor.events({
  
         //create a new activity document
         var newDocument = {
-            chassis: $('#chassisChoice').val(),
+            chassis: $('#chassis').val(),
             color: $('#colorChoice').val(),
             bumper: $('#bumperChoice').val(),
 			wheel: $('#wheelChoice').val(),

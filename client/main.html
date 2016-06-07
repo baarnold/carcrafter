@@ -36,7 +36,7 @@
 			<div class="col-sm-10 col-lg-10 col-md-10">
 				<div class="panel-group">
 					<div class="panel panel-default"  name="carpanel">
-						<div class="panel-header"><h3>Name's Car</h3></div>
+						<div class="panel-header"><h3></h3></div>
 						<div class="panel-body">{{> carPicture}} </div>
 					</div>
 					{{> carEditor}}
@@ -63,10 +63,10 @@
 					<option>Sunflower Yellow</option>
 				</select>
 				<select id="wheelChoice" class="form-control">
-					<option>16 inch rim/24 inch tire</option>
-					<option>18 inch rim/24 inch tire</option>
-					<option>20 inch rim/24 inch tire</option>
-					<option>22 inch rim/24 inch tire</option>
+					<option>16 inch rim</option>
+					<option>18 inch rim</option>
+					<option>20 inch rim</option>
+					<option>22 inch rim</option>
 				</select>
 				<select id="bumperChoice" class="form-control">
 					<option>Standard Bumper (Plastic)</option>
@@ -110,9 +110,9 @@
 <template name="carcolor">
 	<form>
 		<strong><u>Color</u></strong><br>
-		<input type="radio" id="blue-color" name="color" value="Blue">Blue <br>
-		<input type="radio" id="red-color" name="color" value="Red">Red <br>
-		<input type="radio" id="yellow-color" name="color" value="Yellow">Yellow <br>
+		<input type="radio" id="color" name="color" value="Blue">Blue <br>
+		<input type="radio" id="color" name="color" value="Red">Red <br>
+		<input type="radio" id="color" name="color" value="Yellow">Yellow <br>
 	</form>
 </template>
 
