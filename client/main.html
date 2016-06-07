@@ -9,7 +9,8 @@
 				<a class="navbar-brand" href="#">CarCrafter</a>
 			</div>
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="/">Home</a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/carcrafter">Craft Car</a></li>
 				<li><a href="#">{{> loginButtons}}</a></li>
 			</ul>
 		</div>
@@ -24,7 +25,7 @@
 	</div>
 </template>
 
-<template name="content">
+<template name="carcrafter">
 	{{> navigation }}
 	
 	<div class="container">
@@ -32,7 +33,25 @@
 			<div class="col-sm-10 col-lg-10 col-md-10">
 				<div class="panel-group">
 					{{> carEditor}}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="carlist">
+	{{> navigation }}
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-10 col-lg-10 col-md-10">
+				<div class="panel-group">
+					<div class="panel panel-default"  name="carpanel">
+						<a href="/carcrafter"><input type="submit" value="Click Here Start Crafting Your Own Car!" class="btn btn-danger btn-lg btn-block"></a>
+					</div>
 					{{> viewCars}}
+					<div class="panel panel-default"  name="carpanel">
+						<a href="/carcrafter"><input type="submit" value="Click Here Start Crafting Your Own Car!" class="btn btn-danger btn-lg btn-block"></a>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -14,7 +14,7 @@ Session.setDefault('bumper', 'PlasBump');
 Session.setDefault('wheel', '16wheel');
 Session.setDefault('spoiler', 'NoSpoil');
 
-Template.content.helpers({
+Template.carcrafter.helpers({
 	"isLoggedIn": function() {
 		return Meteor.user() != null;
 	}

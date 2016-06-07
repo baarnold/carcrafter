@@ -3,7 +3,11 @@ import { productsCollection } from '../collections/collections.js';
 //Home Page
 Router.route('/', function() {
 	//View allProducts template
-	this.render('content');
+	this.render('carlist');
+});
+
+Router.route('/carcrafter', function() {
+	this.render('carcrafter');
 });
 
 //Use a hook to prevent unauthorized access to templates with data
